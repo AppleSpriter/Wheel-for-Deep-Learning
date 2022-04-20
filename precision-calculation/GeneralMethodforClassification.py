@@ -180,21 +180,6 @@ def cal_confusion_matrix(list1, list2, name_dic):
         for j in range(len(confusion_matrix_origin)):
             confusion_matrix[i][j] = confusion_matrix_origin[i][j]
             #confusion_matrix[paper_one_dict[i]][paper_one_dict[j]] = confusion_matrix_origin[i][j]
-    #单词处理
-    confusion_matrix[0][0] += 9
-    confusion_matrix[0][8] -= 9
-    confusion_matrix[2][2] += confusion_matrix[2][6]
-    confusion_matrix[2][6] = 0
-    confusion_matrix[3][3] += confusion_matrix[3][8]
-    confusion_matrix[3][8] = 0
-    confusion_matrix[9][9] += confusion_matrix[9][7]
-    confusion_matrix[9][7] = 0
-    confusion_matrix[10][10] += confusion_matrix[10][9]
-    confusion_matrix[10][9] = 0
-    confusion_matrix[1][1] += confusion_matrix[1][8]
-    confusion_matrix[1][8] = 0
-    confusion_matrix[6][6] += confusion_matrix[6][7]
-    confusion_matrix[6][7] = 0
     #原顺序
     #confusion_matrix = confusion_matrix_origin
     #-------------------------输出矩阵--------------------------
